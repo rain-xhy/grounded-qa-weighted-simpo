@@ -1,0 +1,10 @@
+{
+  "qa_instruction": "Answer the question directly and concisely using the supplied source. Include every item explicitly requested in the question. Use exactly ONE complete <statement>answer<cite>[start-end]</cite></statement> block, with the minimal sufficient source ranges that fully support the answer. Put the actual answer in this first statement; omit introductions, unrelated facts, alternatives and historical versions not asked for. End immediately after </statement>. Do not repeat the answer.",
+  "summary_instruction": "Write a focused one-page executive summary in approximately 350-450 words and no more than fourteen concise <statement>claim<cite>[start-end]</cite></statement> blocks. Prioritize the report objective, main findings with important numbers, implementation problems, costs, conclusions and recommendations. Cover the main findings rather than spending most of the answer on background history. Use minimal sufficient source ranges that fully support each claim. Do not repeat points; finish the final block completely and then stop.",
+  "qa_max_statements": 1,
+  "summary_max_statements": 14,
+  "summary_soft_token_limit": 1000,
+  "max_new_tokens": 1536,
+  "output_no_repeat_ngram_size": 16,
+  "output_repetition_penalty": 1.04
+}

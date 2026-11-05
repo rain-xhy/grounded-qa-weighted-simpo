@@ -1,0 +1,10 @@
+transformers==4.47.0
+accelerate==1.2.1
+bitsandbytes==0.44.1
+peft==0.14.0
+numpy==1.26.4
+nltk==3.9.1
+safetensors>=0.4.5,<0.6
+tiktoken==0.7.0
+sentencepiece==0.2.0
+tqdm>=4.66,<5

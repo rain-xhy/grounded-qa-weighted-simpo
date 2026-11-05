@@ -1,0 +1,20 @@
+# Default-deny release tree
+*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/decoding.json
+!/grounded_qa/
+!/grounded_qa/__init__.py
+!/grounded_qa/__main__.py
+!/grounded_qa/claims.py
+!/grounded_qa/decoding.py
+!/grounded_qa/evidence.py
+!/grounded_qa/evidence_simpo.py
+!/grounded_qa/gap_weighted_simpo.py
+!/grounded_qa/io.py
+!/grounded_qa/judge.py
+!/grounded_qa/metrics.py
+!/grounded_qa/model.py
+!/grounded_qa/preferences.py
+!/grounded_qa/response.py
