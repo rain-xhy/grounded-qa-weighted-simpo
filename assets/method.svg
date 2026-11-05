@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="396" viewBox="0 0 1120 396" role="img" aria-labelledby="title desc">
+ <title id="title">From candidate feedback to preference optimization</title>
+ <desc id="desc">Panel A shows candidate evaluation and the accepted pair with its weight. Panel B shows how the SFT adapter and weighted preferences enter SimPO before cited-answer generation.</desc>
+ <defs>
+   <marker id="arrow" markerWidth="8" markerHeight="8" refX="6.5" refY="3.5" orient="auto"><path d="m0 0 7 3.5L0 7" fill="none" stroke="#4c687b" stroke-width="1.35"/></marker>
+ </defs>
+ <rect x=".75" y=".75" width="1118.5" height="394.5" rx="12" fill="#fafcfd" stroke="#cedae2" stroke-width="1.5"/>
+ <g font-family="Arial, Helvetica, sans-serif">
+   <g fill="#152b40" font-size="22" font-weight="700"><text x="30" y="41">A</text><text x="65" y="41">Construct preferences within a question</text><text x="30" y="257">B</text><text x="65" y="257">Optimize the response distribution</text></g>
+   <path d="M30 216h1060" stroke="#d5e0e6"/>
+   <g fill="#edf3f7" stroke="#a8bdca" stroke-width="1.3">
+     <rect x="32" y="76" width="204" height="93" rx="7"/>
+     <rect x="274" y="63" width="293" height="119" rx="7"/>
+     <rect x="606" y="76" width="197" height="93" rx="7"/>
+     <rect x="32" y="286" width="204" height="74" rx="7"/>
+     <rect x="274" y="286" width="293" height="74" rx="7"/>
+     <rect x="844" y="286" width="244" height="74" rx="7"/>
+   </g>
+   <g fill="#e3f3ef" stroke="#87b6a9" stroke-width="1.4"><rect x="844" y="76" width="244" height="93" rx="7"/><rect x="606" y="286" width="197" height="74" rx="7"/></g>
+   <g fill="none" stroke="#4c687b" stroke-width="1.65" marker-end="url(#arrow)">
+     <path d="M236 122h32"/><path d="M567 122h33"/><path d="M803 122h35"/>
+     <path d="M236 323h32"/><path d="M567 323h33"/><path d="M803 323h35"/>
+     <path d="M966 169v25H705v85" stroke-dasharray="5 4"/>
+   </g>
+   <g fill="#19364a" font-size="19" font-weight="600" text-anchor="middle">
+     <text x="134" y="112">Two candidates</text><text x="420" y="95">Candidate feedback</text><text x="704" y="112">Eligibility + gap</text><text x="966" y="112">Preference pair</text>
+     <text x="134" y="316">LongCite-8B</text><text x="420" y="316">Supervised fine-tuning</text><text x="705" y="316">Weighted SimPO</text><text x="966" y="316">Cited answer</text>
+   </g>
+   <g fill="#486173" font-size="16" text-anchor="middle">
+     <text x="134" y="142">same source and prompt</text>
+     <text x="420" y="125">Q · quality      E · support</text><text x="420" y="151">C · contribution      B · behavior</text>
+     <text x="704" y="142">ΔR ≥ 0.05</text><text x="966" y="142">w = 1 + 0.3 ΔR</text>
+     <text x="134" y="341">4-bit base model</text><text x="420" y="341">learn statement + citation format</text><text x="705" y="341">response tokens only</text><text x="966" y="341">greedy decoding</text>
+   </g>
+ </g>
+</svg>

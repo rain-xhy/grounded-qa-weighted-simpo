@@ -1,6 +1,6 @@
 """Externally gap-weighted SimPO with matched, window-normalized gradients."""
 import math
-from .evidence_simpo import simpo_loss, backward_pair
+from .simpo import simpo_loss, backward_pair
 
 
 def validate_weights(weights):

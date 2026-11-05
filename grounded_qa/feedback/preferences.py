@@ -1,7 +1,7 @@
 """Construct a preference pair from two independently annotated answers."""
 import math
 
-from .claims import parse_claims
+from ..data.claims import parse_claims
 
 WEIGHTS = {"Q": 0.4, "E": 0.2, "C": 0.3, "B": 0.1}
 

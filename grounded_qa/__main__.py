@@ -3,7 +3,7 @@ import argparse
 import importlib
 import json
 
-from .io import read_rows, write_rows
+from .data.io import read_rows, write_rows
 
 
 def main():
@@ -41,7 +41,7 @@ def main():
             return {**row, "prompt": prompt, "sentence_count": len(sentences)}
         write_rows(args.out, map(attach, rows))
     elif args.command == "pairs":
-        from .preferences import make_pair
+        from .feedback.preferences import make_pair
         write_rows(args.out, (pair for row in rows if (pair := make_pair(row)) is not None))
     elif args.command == "intervene":
         for row in rows:
@@ -53,13 +53,13 @@ def main():
     elif args.command == "metrics":
         from pathlib import Path
         from transformers import AutoTokenizer
-        from .metrics import summarize
+        from .evaluation.metrics import summarize
         tok = AutoTokenizer.from_pretrained(args.tokenizer, local_files_only=True, trust_remote_code=True)
         result = summarize(rows, read_rows(args.scores), lambda t: tok.encode(t, add_special_tokens=False),
                            Path(args.tokenizer).name)
         Path(args.out).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     elif args.command == "judge":
-        from .judge import author_evaluator, semantic_scores
+        from .evaluation.judge import author_evaluator, semantic_scores
         mod, factory = args.transport.rsplit(":", 1)
         judge = getattr(importlib.import_module(mod), factory)()
         cite = author_evaluator(args.scorer_dir, "auto_scorer.py", judge.query, args.judge_model)
@@ -70,12 +70,15 @@ def main():
                     yield {"id": row["id"], "semantic_status": "ok",
                            **semantic_scores(row, cite, correct, judge, args.judge_model)}
         write_rows(args.out, scores())
+    elif args.command == "trace":
+        from .feedback.traces import trace
+        write_rows(args.out, trace(args, rows))
+    elif args.command == "predict":
+        from .inference.generate import predict
+        write_rows(args.out, predict(args, rows))
     else:
-        from .model import predict, trace, train
-        if args.command in ("sft", "simpo"):
-            train(args, rows)
-        else:
-            write_rows(args.out, (trace if args.command == "trace" else predict)(args, rows))
+        from .training.trainer import train
+        train(args, rows)
 
 
 if __name__ == "__main__":

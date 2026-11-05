@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 
 import numpy as np
-from .claims import plain_answer
+from ..data.claims import plain_answer
 
 
 def fingerprint(value):
