@@ -2,33 +2,33 @@
   <title id="title">Gap-weighted preference optimization for long-document QA</title>
   <desc id="desc">Four feedback signals guide SimPO. Highlighted lines in a source document connect to two claims with citations.</desc>
   <defs>
-    <linearGradient id="bg" x2="1" y2=".8"><stop stop-color="#101e34"/><stop offset="1" stop-color="#143c50"/></linearGradient>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#cce5ea" stroke-width=".65" opacity=".14"/></pattern>
+    <linearGradient id="bg" x2="1" y2=".8"><stop stop-color="#231e32"/><stop offset="1" stop-color="#432e49"/></linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#d6c6d7" stroke-width=".65" opacity=".14"/></pattern>
   </defs>
   <rect width="1120" height="242" rx="14" fill="url(#bg)"/>
   <rect width="1120" height="242" rx="14" fill="url(#grid)"/>
   <g font-family="Arial, Helvetica, sans-serif">
-    <path d="M42 39h34" stroke="#62d3bd" stroke-width="4"/>
-    <text x="42" y="69" fill="#94d8d0" font-size="15" letter-spacing="2.1">LONG-DOCUMENT QUESTION ANSWERING</text>
-    <text x="39" y="132" fill="#f7fbfc" font-size="56" font-weight="700">Gap-weighted SimPO</text>
-    <text x="43" y="169" fill="#c1d2df" font-size="21">Four-dimensional feedback for answers with verifiable citations</text>
-    <text x="43" y="213" fill="#87d9ca" font-size="15">LongCite-8B</text>
-    <path d="M147 201v15m99-15v15" stroke="#688495"/>
-    <text x="161" y="213" fill="#c4d7e3" font-size="15">4-bit LoRA</text>
-    <text x="260" y="213" fill="#c4d7e3" font-size="15">16K context budget</text>
+    <path d="M42 39h34" stroke="#f7bd79" stroke-width="4"/>
+    <text x="42" y="69" fill="#f2cda3" font-size="15" letter-spacing="2.1">LONG-DOCUMENT QUESTION ANSWERING</text>
+    <text x="39" y="132" fill="#fff9f3" font-size="56" font-weight="700">Gap-weighted SimPO</text>
+    <text x="43" y="169" fill="#ded3e2" font-size="21">Four-dimensional feedback for answers with verifiable citations</text>
+    <text x="43" y="213" fill="#f4c28e" font-size="15">LongCite-8B</text>
+    <path d="M147 201v15m99-15v15" stroke="#897389"/>
+    <text x="161" y="213" fill="#e1d4e0" font-size="15">4-bit LoRA</text>
+    <text x="260" y="213" fill="#e1d4e0" font-size="15">16K context budget</text>
     <g transform="translate(778 48)">
-      <text x="0" y="0" fill="#b1c7d4" font-size="13" letter-spacing="1.2">SOURCE</text>
-      <text x="199" y="0" fill="#b1c7d4" font-size="13" letter-spacing="1.2">ANSWER</text>
-      <rect x="0" y="14" width="123" height="132" rx="6" fill="#1d394c" stroke="#7996a7"/>
+      <text x="0" y="0" fill="#d3bdd0" font-size="13" letter-spacing="1.2">SOURCE</text>
+      <text x="199" y="0" fill="#d3bdd0" font-size="13" letter-spacing="1.2">ANSWER</text>
+      <rect x="0" y="14" width="123" height="132" rx="6" fill="#372c42" stroke="#aa929f"/>
       <g fill="none" stroke-linecap="round">
-        <path d="M14 33h74m-74 12h91m-91 24h76m-76 12h89m-89 12h67m-67 24h88m-88 12h62" stroke="#718c9c" stroke-width="3"/>
-        <path d="M14 57h89m-89 48h80" stroke="#71d5bf" stroke-width="5"/>
-        <path d="M103 57h37c18 0 15-14 34-14h22M94 105h48c16 0 17 9 34 9h20" stroke="#71d5bf" stroke-width="2"/>
+        <path d="M14 33h74m-74 12h91m-91 24h76m-76 12h89m-89 12h67m-67 24h88m-88 12h62" stroke="#a991a1" stroke-width="3"/>
+        <path d="M14 57h89m-89 48h80" stroke="#ffc889" stroke-width="5"/>
+        <path d="M103 57h37c18 0 15-14 34-14h22M94 105h48c16 0 17 9 34 9h20" stroke="#ffc889" stroke-width="2"/>
       </g>
-      <g fill="#204859" stroke="#81cfbf">
+      <g fill="#533849" stroke="#e9b585">
         <rect x="196" y="28" width="96" height="31" rx="5"/><rect x="196" y="98" width="96" height="31" rx="5"/>
       </g>
-      <g fill="#e6f4f2" font-size="14" text-anchor="middle"><text x="244" y="49">Claim 1  [a]</text><text x="244" y="119">Claim 2  [b]</text></g>
+      <g fill="#fff1df" font-size="14" text-anchor="middle"><text x="244" y="49">Claim 1  [a]</text><text x="244" y="119">Claim 2  [b]</text></g>
     </g>
   </g>
 </svg>

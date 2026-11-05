@@ -2,6 +2,7 @@
 *
 !/.gitignore
 !/assets/
+!/assets/badges/
 !/configs/
 !/grounded_qa/
 !/grounded_qa/data/
@@ -11,6 +12,9 @@
 !/grounded_qa/training/
 !/tests/
 !/README.md
+!/assets/badges/python.svg
+!/assets/badges/pytorch.svg
+!/assets/badges/transformers.svg
 !/assets/header.svg
 !/assets/method.svg
 !/configs/decoding.json

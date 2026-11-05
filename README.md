@@ -4,6 +4,8 @@
 
 **面向可核验长文档问答的四维反馈与加权偏好优化**
 
+[![Python 3.12](assets/badges/python.svg)](https://docs.python.org/3.12/) &nbsp; [![PyTorch 2.5](assets/badges/pytorch.svg)](https://pytorch.org/) &nbsp; [![Hugging Face Transformers 4.47.0](assets/badges/transformers.svg)](https://huggingface.co/docs/transformers/v4.47.0/en/index)
+
 [方法设计](#方法设计) · [评价指标](#评价指标) · [快速开始](#快速开始) · [代码导航](#代码导航)
 
 </div>
